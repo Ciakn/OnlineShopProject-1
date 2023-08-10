@@ -1,0 +1,5 @@
+form p {
+    font-size: small;
+    color: var(--color-primary);
+    margin-top: 1rem;
+}

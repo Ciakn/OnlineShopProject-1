@@ -1,0 +1,131 @@
+.product-list {
+  width: auto;
+  margin: 2rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  text-align: center;
+  /* grid-template-rows: auto; */
+  gap: 1rem;
+}
+.card {
+  width: fit-content;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+
+  /* align-items: center; */
+  cursor: pointer;
+
+  box-shadow: var(--card-shadow);
+}
+.card img {
+  width: 260px;
+  height: 190px;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid gray;
+}
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+
+  margin: 1rem 1rem 0 1rem;
+}
+.descriptio p:nth-child(1) {
+  margin-right: 0.4rem;
+}
+.description .price {
+  color: rgba(255, 0, 0, 0.585);
+  text-decoration: line-through;
+}
+.description .offprice {
+  color: green;
+}
+.description a {
+  color: white;
+  background-color: var(--color-primary);
+  padding: 5px 10px;
+  border-radius: 7px 10px;
+  transition: all 0.1s ease;
+}
+.description a:hover {
+  box-shadow: inset 1px 1px 9px rgb(71, 70, 70);
+}
+.choosen-cart {
+  margin: 2rem 3rem;
+  width: auto;
+  display: flex;
+
+  grid-template-rows: auto;
+}
+.cart-detail {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  box-shadow: var(--card-shadow);
+  width: 50vw;
+}
+
+.cart-detail img {
+  width: 105px;
+}
+.description button {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: white;
+border-radius: 7px;
+  font-size: large;
+}
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60vw;
+}
+.cart-summery {
+  background-color: aliceblue;
+  width: 30vw;
+  height: 220px;
+  box-shadow: var(--card-shadow);
+}
+.cart-summery h2 {
+  text-align: center;
+}
+
+.summery-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 2rem;
+  border-bottom: 1px solid rgb(204, 201, 201);
+}
+.cart-summery .buy-btn {
+ text-align: center;
+ margin-top: 1rem;
+
+}
+.cart-summery button:hover{
+    box-shadow: inset 1px 1px 9px rgb(71, 70, 70);
+}
+
+.cart-summery button{
+    width: 60%;
+    font-size: 1rem;
+    padding: 0.2rem 1.5rem;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 7px ;
+    
+}

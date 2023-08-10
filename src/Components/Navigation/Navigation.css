@@ -1,0 +1,39 @@
+header nav ul {
+  display: flex;
+  gap: 1rem;
+}
+header {
+  width: 100vw;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: aliceblue;
+
+  border-bottom: 1px solid rgb(204, 204, 204);
+  box-shadow: 0 1px 2px rgb(204, 204, 204);
+}
+header a {
+  color: var(--color-primary);
+  padding: 5px 10px;
+
+  border-radius: 7px 10px;
+  transition: all 0.2s ease;
+}
+header a:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+header li:last-child {
+  position: relative;
+}
+header span {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.672);
+  border-radius: 50%;
+color: gray;
+  padding: 0.01rem 0.02rem;
+}
