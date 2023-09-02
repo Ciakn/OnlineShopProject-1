@@ -2,19 +2,19 @@ import Input from "../../common/Input";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./SignUp.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const initialValues = {
 
   email: "",
   password: "",
 
 };
-const onSubmit = (values) => {
-  console.log(values);
-};
+
+
 const SignUpForm = () => {
+  const navigate = useNavigate()
   const onSubmit = (values) => {
-    console.log(values);
+   navigate('/cards')
   };
   const validationSchema = Yup.object({
     name: Yup.string("").required("Name is Required"),
