@@ -7,7 +7,9 @@ const CartContextDispatcher = createContext();
 const initialState = {
   cart: [],
   total: 0,
+  user : false,
 };
+console.log(initialState.user);
 const CartProvider = ({children}) => {
   const [cart, dispatch] = useReducer(cartReducer, initialState);
   return (

@@ -8,11 +8,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import CheckOutPage from "./pages/CheckOutPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import AuthProvider from "./Providers/AuthProvider";
 
 
 const App = () => {
   return (
     <div className="container">
+      <AuthProvider>
+        
       <CartProvider>
         <ToastContainer/>
         <Routes>
@@ -23,6 +26,7 @@ const App = () => {
           <Route path="/signup" element={<SignUpPage />} />
         </Routes>
       </CartProvider>
+      </AuthProvider>
     </div>
   );
 };

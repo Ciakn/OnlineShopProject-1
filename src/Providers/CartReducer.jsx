@@ -46,7 +46,17 @@ const cartReducer = (state, action) => {
         };
       }
     }
+case "signUp" : {
+ const CloneCart  = [...state.user]
+CloneCart = true;
 
+console.log(CloneCart);
+
+return {
+  ...state , 
+  user : CloneCart
+}
+}
     default:
       return state;
   }

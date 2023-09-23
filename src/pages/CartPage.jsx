@@ -13,17 +13,17 @@ const CartPage = () => {
     e.preventDefault();
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
-  console.log(cart);
+
   return (
     <Layout>
       <main className="choosen-cart">
-        <section className="cart-list">
+        <section   className="cart-list">
           {!cart ? (
             <p>Go shop</p>
           ) : (
             cart.map((c) => {
               return (
-                <section className="cart-detail">
+                <section key={c.id} className="cart-detail">
                   <div>
                     <img src={c.image} alt="shoe-photo" />
                   </div>

@@ -10,6 +10,7 @@ export const products = [
     offPrice: 100,
     discount: 20,
     image: "https://s8.uupload.ir/files/download_mw87.jpg",
+    quantity : 1,
   },
   { id : 2,
     name: "Adidas",

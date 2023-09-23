@@ -5,13 +5,16 @@ import { CheckInCart } from "../utils/CheckInCart";
 import "./PagesStyle.css";
 
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 const HomePage = () => {
   const { cart } = useCart();
   const dispatch = useCartAction();
   const addProductHandler = (e, product) => {
-    e.preventDefault();
-    dispatch({ type: "ADD_TO_CART", payload: product });
-    toast.success(`${product.name} added to carts`)
+
+      
+      dispatch({ type: "ADD_TO_CART", payload: product });
+      toast.success(`${product.name} added to carts`);
+    
   };
   return (
     <Layout>
@@ -29,8 +32,12 @@ const HomePage = () => {
                     <p className="price">{p.price}$</p>
                     <p className="offprice">{p.offPrice}</p>
                   </div>
-                  <a href="" onClick={(e) => addProductHandler(e, p)}>
-                    {CheckInCart(cart, p) ? "In Cart" : "Add To Cart"}
+                  <a
+                   
+                    onClick={(e) => addProductHandler(e, p)}
+              
+                  >
+                    {CheckInCart(cart, p) ? "in Cart" : "Add To Cart"}
                   </a>
                 </div>
               </section>

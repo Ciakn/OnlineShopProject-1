@@ -1,21 +1,32 @@
 import Input from "../../common/Input";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import './Login.css'
+import "./Login.css";
+import { useAuth } from "../../Providers/AuthProvider";
+import { useEffect } from "react";
 const initialValues = {
   name: "",
   email: "",
   password: "",
   PasswordComformation: "",
 };
-const onSubmit = (values) => {
-  console.log(values);
-};
+
+
 const LoginForm = () => {
+  const { login, logout, user, isAuthicated } = useAuth();
+  const navigate = useNavigate();
   const onSubmit = (values) => {
     console.log(values);
-  };
+login(values.email , values.password);
+
+};
+console.log(isAuthicated);
+  useEffect(() => {
+    if (isAuthicated) {
+      navigate("/cards");
+    }
+  }, [isAuthicated]);
   const validationSchema = Yup.object({
     email: Yup.string("")
       .email("Enter a Valid Email")
@@ -56,7 +67,9 @@ const LoginForm = () => {
         >
           LogIn
         </button>
-        <Link to='/login'><p>SignUp</p></Link>
+        <Link to="/login">
+          <p>SignUp</p>
+        </Link>
       </form>
     </div>
   );
